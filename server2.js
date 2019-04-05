@@ -18,11 +18,18 @@ var server = http.createServer(function(req, res) {
     return;
 
   }
+  if(req.url == "/about.html") {
 
+      fs.readFile("about.html", function(err, text){
+        res.setHeader("Content-Type", "text/html");
+        res.end(text);
+      });
+      return;
+  }
+  
   res.setHeader("Content-Type", "text/html");
   res.end("<p>Hello World. Request counter: " + counter + ".</p>");
 
 });
-
 console.log("Starting web server at " + serverUrl + ":" + port);
 server.listen(port, serverUrl);
