@@ -18,14 +18,40 @@ var server = http.createServer(function(req, res) {
 
   }
 
-  if(req.url == "productlisting.json") {
-    fs.readFile("productlist.json", function(err, text){
-        res.setHeader("Content-Type", "text/json");
-        res.end(text);
-      });
+  if(req.url == "/shoppingcart.js") {
 
-      return;
+    fs.readFile("shoppingcart.js", function(err, text){
+      res.setHeader("Content-Type", "application/javascript");
+      res.end(text);
+    });
+   
+    return;
+
   }
+  if(req.url == "/images/balloon2.jpeg") {
+
+    fs.readFile("images/balloon2.jpeg", function(err, text){
+      res.setHeader("Content-Type", "image/jpeg");
+      res.end(text);
+    });
+   
+    return;
+
+  }
+  if(req.url == "/stylesheet.css") {
+
+    fs.readFile("stylesheet.css", function(err, text){
+      res.setHeader("Content-Type", "text/css");
+      res.end(text);
+    });
+   
+    return;
+
+  }
+  
+
+ 
+  
   
   
 

@@ -3,16 +3,32 @@
   <head>
     <meta charset="UTF-8">
     <title>Light</title>
+    <script src="shoppingcart.js" async></script>
+    <link rel="stylesheet" href="stylesheet.css" />
   </head>
   <body>
-    <p id="demo">A Paragraph</p>
-    <button type="button" onclick="myFunction()">Try it</button>
-
-    <script>
-    let productlist
-    function myFunction() {
-       
-    }
-    </script>
+    <div >
+      <span class="shop-item-title">Album 1</span>
+     <img class="shop-item-image" src="images/balloon2.jpeg">
+      <div >
+        <span class="shop-item-price">$6.99</span>
+          <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+      </div>
+  </div>
+     <section class="container content-section">
+            <h2 class="section-header">CART</h2>
+            <div class="cart-row">
+                <span class="cart-item cart-header cart-column">ITEM</span>
+                <span class="cart-price cart-header cart-column">PRICE</span>
+                <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+            </div>
+            <div class="cart-items">
+            </div>
+            <div class="cart-total">
+                <strong class="cart-total-title">Total</strong>
+                <span class="cart-total-price">$0</span>
+            </div>
+            <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
+        </section>
   </body>
 </html>
