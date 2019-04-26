@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Jo Light Designs</title>
+    <script src="checkout.js" async></script>
+    <link rel="stylesheet" href="stylesheet.css" />
+  </head>
+  <body>
+    <section class="container content-section">
+            <h2 class="section-header">CART</h2>
+            <div class="cart-row">
+                <span class="cart-item cart-header cart-column">ITEM</span>
+                <span class="cart-price cart-header cart-column">PRICE</span>
+                <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+            </div>
+            <div class="cart-items">
+            </div>
+            <div class="cart-total">
+                <strong class="cart-total-title">Total</strong>
+                <span class="cart-total-price">$0</span>
+            </div>
+            <button class="btn btn-primary btn-purchase" type="button" onclick="myFunction()">PURCHASE</button>
+            <!-- <button class="btn btn-primary shop-item-button" type="button" onclick="myFunction()">HOME</button> -->
+            <script>
+            function myFunction() {
+            location.href = "http://localhost:3030/light.html";
+            }
+            </script>
+    
+            <button class="btn btn-primary shop-item-button" type="button" onclick="myFunction2()">KEEP SHOPPING</button>
+            <script>
+            function myFunction2() {
+            location.href = "http://localhost:3030/productpage.html";
+            }
+            </script>   
+        </section>
+    
+  </body>

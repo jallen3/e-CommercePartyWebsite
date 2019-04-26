@@ -2,18 +2,62 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Light</title>
+    <title>Jo Light Designs</title>
     <script src="shoppingcart.js" async></script>
     <link rel="stylesheet" href="stylesheet.css" />
   </head>
   <body>
+      <h1 class="h1-title">Single Items</h1>
+    <!-- <p id="demo">Click to Return to Home page</p> -->
+    <br />
+    <br /><button class="btn btn-primary shop-item-button" type="button" onclick="myFunction()">HOME</button><br />
+    <br /> 
+    <script>
+    function myFunction() {
+    location.href = "http://localhost:3030/about.html";
+    // document.getElementById("demo").innerHTML = "Paragraph changed.";
+    }
+    </script>
+    
     <div >
-      <span class="shop-item-title">Album 1</span>
-     <img class="shop-item-image" src="images/balloon2.jpeg">
+      <span class="shop-item-title">Balloons</span>
+     <img class="shop-item-image" src="images/PartyBalloons.jpg" >
       <div >
-        <span class="shop-item-price">$6.99</span>
+        <span class="shop-item-price">$2.99</span>
           <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
       </div>
+  </div>
+  <div >
+    <span class="shop-item-title">Tableware</span>
+   <img class="shop-item-image" src="images/Tableware.jpg">
+    <div >
+      <span class="shop-item-price">$4.99</span>
+        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+    </div>
+  </div>
+  <div >
+    <span class="shop-item-title">Decorations</span>
+   <img class="shop-item-image" src="images/Decorations.jpg">
+    <div >
+      <span class="shop-item-price">$6.99</span>
+        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+    </div>
+  </div>
+  <div >
+    <span class="shop-item-title">Banners</span>
+   <img class="shop-item-image" src="images/Banners.png">
+    <div >
+      <span class="shop-item-price">$3.99</span>
+        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+    </div>
+  </div>
+  <div >
+    <span class="shop-item-title">Invitations</span>
+   <img class="shop-item-image" src="images/Invitations.jpg">
+    <div >
+      <span class="shop-item-price">$9.99</span>
+        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+    </div>
   </div>
      <section class="container content-section">
             <h2 class="section-header">CART</h2>
@@ -28,7 +72,11 @@
                 <strong class="cart-total-title">Total</strong>
                 <span class="cart-total-price">$0</span>
             </div>
-            <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
+            <button class="btn btn-primary btn-purchase" type="button">CHECKOUT</button>
         </section>
+        
+             
   </body>
+  
+ 
 </html>

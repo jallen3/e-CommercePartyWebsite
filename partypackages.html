@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Jo Light Designs</title>
+    <script src="shoppingcart.js" async></script>
+    <link rel="stylesheet" href="stylesheet.css" />
+  </head>
+  <body>
+      <h1 class="h1-title">Packages</h1>
+    <div >
+      <span class="shop-item-title">Gender Reveal</span>
+     <img class="shop-item-image" src="images/GenderRevealPP.jpg">
+      <div >
+        <span class="shop-item-price">$24.99</span>
+          <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+      </div>
+  </div>
+  <div >
+      <span class="shop-item-title">Graduation</span>
+    <img class="shop-item-image" src="images/GradPP.jpg">
+      <div >
+        <span class="shop-item-price">$24.99</span>
+         <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+       </div>
+  </div>
+  <div >
+      <span class="shop-item-title">Mystery</span>
+    <img class="shop-item-image" src="images/MysteryPP.jpg">
+      <div >
+        <span class="shop-item-price">$24.99</span>
+          <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+      </div>
+   </div>
+  <div >
+      <span class="shop-item-title">New Years</span>
+    <img class="shop-item-image" src="images/NewYearsPP.jpg">
+      <div >
+        <span class="shop-item-price">$24.99</span>
+          <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+      </div>
+  </div>
+  <div >
+      <span class="shop-item-title">Unicorn</span>
+    <img class="shop-item-image" src="images/UnicornPP.jpg">
+      <div >
+        <span class="shop-item-price">$24.99</span>
+          <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+      </div>
+  </div>
+     <section class="container content-section">
+            <h2 class="section-header">CART</h2>
+            <div class="cart-row">
+                <span class="cart-item cart-header cart-column">ITEM</span>
+                <span class="cart-price cart-header cart-column">PRICE</span>
+                <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+            </div>
+            <div class="cart-items">
+            </div>
+            <div class="cart-total">
+                <strong class="cart-total-title">Total</strong>
+                <span class="cart-total-price">$0</span>
+            </div>
+            <button class="btn btn-primary btn-purchase" type="button">CHECKOUT</button>
+        </section>
+        
+        <h1></h1>
+        <p id="demo">Click to Return to Home page</p>
+        <button class="btn btn-primary shop-item-button" type="button" onclick="myFunction()">HOME</button>
+        <script>
+        function myFunction() {
+        location.href = "http://localhost:3030/about.html";
+        // document.getElementById("demo").innerHTML = "Paragraph changed.";
+        }
+        </script>    
+  </body>
+  
+</html>

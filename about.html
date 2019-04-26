@@ -3,15 +3,30 @@
   <head>
     <meta charset="UTF-8">
     <title>About</title>
+    <link rel="stylesheet" href="stylesheet.css" />
   </head>
   <body>
-    <h1>HIHIHIH</h1>
-    <p id="demo">abooooot</p>
-    <button type="button" onclick="myFunction()">Try it</button>
-    
+    <h1 class="h1-title">Jo Light Designs</h1>
+    <p id="demo" style="color:red; font-size:130%; text-align:center;">This website was created in memory of my grandmother who passed away from 
+      cancer in January of 2014. She always radiated positive energy and it was definitely 
+      displayed through the parties that she threw!</p><br />
+      <br />  
+
+    <img src="images/Grandma.JPG" class="center"  width="500" height="700"><br />
+    <br />  
+
+     <button class="btn btn-primary btn-purchase" type="button" onclick="myFunction()">SHOP SINGLE ITEMS</button>
+     <script>
+        function myFunction() {
+          location.href = "http://localhost:3030/productpage.html";
+          //  document.getElementById("demo").innerHTML = "Paragraph changed.";
+        }
+        </script>
+     <button class="btn btn-primary btn-purchase" type="button" onclick="myFunction2()">SHOP PACKAGES</button>
+   
     <script>
-    function myFunction() {
-      location.href = "http://localhost:3037/light.html";
+    function myFunction2() {
+      location.href = "http://localhost:3030/partypackages.html";
       //  document.getElementById("demo").innerHTML = "Paragraph changed.";
     }
     </script>

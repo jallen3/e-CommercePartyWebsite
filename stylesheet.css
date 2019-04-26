@@ -215,6 +215,7 @@ html, body {
 
 .shop-item-image {
     height: 250px;
+
 }
 
 .shop-item-details {
@@ -335,3 +336,34 @@ html, body {
     margin: 40px auto 80px auto;
     font-size: 1.75em;
 }
+
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+
+  .h1-title {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 3.0em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.ImageBorder
+{
+    border-width: 1px;
+    border-color: Black;
+}
+
+body {
+    background-color: lightblue;
+  }
+
+
+

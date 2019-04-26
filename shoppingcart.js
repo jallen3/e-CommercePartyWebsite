@@ -1,12 +1,12 @@
 if (document.readyState == 'loading') {
-    console.log("debug")
+   
     document.addEventListener('DOMContentLoaded', ready)
 } else {
-    console.log("debug2")
+    
     ready()
 }
 function ready() {
-    console.log("debug3")
+    
     var addToCartButtons = document.getElementsByClassName('shop-item-button')
     for (var i = 0; i < addToCartButtons.length; i++) {
         var button = addToCartButtons[i]
@@ -23,6 +23,9 @@ function ready() {
         var input = quantityInputs[i]
         input.addEventListener('change', quantityChanged)
     }
+    var purchaseButton = document.getElementsByClassName('btn-purchase')[0]
+    console.log(purchaseButton)
+    purchaseButton.addEventListener('click', createQueryString)
 }
 function addToCartClicked(event) {
     var button = event.target
@@ -86,5 +89,50 @@ function updateCartTotal() {
     }
     total = Math.round(total * 100) / 100
     document.getElementsByClassName('cart-total-price')[0].innerText = '$' + total
+}
+
+function createQueryString(){
+    //get the items in the cart and their quantity
+    var cartItemContainer = document.getElementsByClassName('cart-items')[0]
+    var cartRows = cartItemContainer.getElementsByClassName('cart-row')
+    //setup four arrays, one for each product attribute that we care about
+    var itemNames = []
+    var itemImages = []
+    var itemPrices = []
+    var itemQuantities = []
+    for (var i = 0; i < cartRows.length; i++) {
+        var cartRow = cartRows[i]
+        var nameElement = cartRow.getElementsByClassName('cart-item')[0]
+        console.log(nameElement)
+        console.log(nameElement.getElementsByClassName('cart-item-title')[0].innerText)
+        itemNames[i] = nameElement.getElementsByClassName('cart-item-title')[0].innerText
+        console.log(nameElement.firstElementChild.src)
+        itemImages[i] = nameElement.firstElementChild.src
+        var priceElement = cartRow.getElementsByClassName('cart-price')[0]
+        var quantityElement = cartRow.getElementsByClassName('cart-quantity-input')[0]
+        var price = parseFloat(priceElement.innerText.replace('$', ''))
+        itemPrices[i] = price
+        var quantity = quantityElement.value
+        itemQuantities[i] = quantity
+    }
+    console.log(itemImages,itemNames,itemPrices,itemQuantities)
+    //take all the items and construct a query string 
+    var queryString = "?"
+    for(var i = 0; i < itemNames.length; i++){
+        queryString += itemNames[i] + ","
+        queryString += itemPrices[i] + ","
+        queryString += itemImages[i] + ","
+        queryString += itemQuantities[i] 
+            if(i != itemNames.length -1){
+                queryString += "&"
+            }
+    }
+    console.log(queryString)
+    //route to checkout page w/ the query string
+    window.location.href = "http://localhost:3030/checkout.html" + queryString;
+ 
+
+    //need another function on the checkout page to parse the query string for the items and quantities 
+   
 }
 
